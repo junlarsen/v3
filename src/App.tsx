@@ -8,7 +8,7 @@ export function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/x">
-          <h1>Test Redirect Route</h1>
+          <p>Hi</p>
         </Route>
 
         <Route path="/">

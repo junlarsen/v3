@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, PropsWithChildren, PureComponent, useEffect, useState } from 'react'
 import {
   EuiPage,
   EuiPageBody,
@@ -14,8 +14,32 @@ import {
 } from '@elastic/eui'
 
 import Logo from '../logo.svg'
+import { getFeaturedProjects, Project } from '../app/App'
+
+export function FeaturedProjects({ projects }: PropsWithChildren<{ projects: Array<Project> }>) {
+  return (
+    <>
+      {projects.map(project => (
+        <EuiFlexItem>
+          <EuiCard
+            href={`https://github.com/${project.repo}`}
+            layout="horizontal"
+            title={project.title}
+            description={project.description}
+          />
+        </EuiFlexItem>)
+      )}
+    </>
+  )
+}
 
 export function HomeView() {
+  const [projects, setProjects] = useState<Array<Project>>([])
+
+  useEffect(() => {
+    getFeaturedProjects().then(res => setProjects(res))
+  })
+
   return (
     <div>
       <EuiHeader>
@@ -59,7 +83,12 @@ export function HomeView() {
           <EuiSpacer />
 
           <EuiText>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed felis accumsan, venenatis lorem vitae, volutpat odio. Ut pellentesque tincidunt urna, in ullamcorper diam suscipit vel. Integer pharetra vitae ligula eget tincidunt. Duis volutpat volutpat ipsum eget ornare. Mauris nisl dui, dictum id eleifend sit amet, vestibulum ornare ipsum. Donec bibendum dolor nec turpis tincidunt mollis. Nam semper, tortor eget blandit finibus, odio lectus imperdiet nisl, vitae efficitur felis erat non urna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed felis accumsan, venenatis lorem vitae,
+              volutpat odio. Ut pellentesque tincidunt urna, in ullamcorper diam suscipit vel. Integer pharetra vitae
+              ligula eget tincidunt. Duis volutpat volutpat ipsum eget ornare. Mauris nisl dui, dictum id eleifend sit
+              amet, vestibulum ornare ipsum. Donec bibendum dolor nec turpis tincidunt mollis. Nam semper, tortor eget
+              blandit finibus, odio lectus imperdiet nisl, vitae efficitur felis erat non urna. Interdum et malesuada
+              fames ac ante ipsum primis in faucibus.</p>
           </EuiText>
 
           <EuiSpacer />
@@ -71,41 +100,7 @@ export function HomeView() {
           <EuiSpacer />
 
           <EuiFlexGroup gutterSize="m">
-            <EuiFlexItem>
-              <EuiCard
-                href="/x"
-                layout="horizontal"
-                title={'Interesting Project'}
-                description={'Some cool project build with Elastic UI, React and TypeScript.'}
-              />
-            </EuiFlexItem>
-
-            <EuiFlexItem>
-              <EuiCard
-                href="/x"
-                layout="horizontal"
-                title={'Interesting Project'}
-                description={'Some cool project build with Elastic UI, React and TypeScript.'}
-              />
-            </EuiFlexItem>
-
-            <EuiFlexItem>
-              <EuiCard
-                href="/x"
-                layout="horizontal"
-                title={'Interesting Project'}
-                description={'Some cool project build with Elastic UI, React and TypeScript.'}
-              />
-            </EuiFlexItem>
-
-            <EuiFlexItem>
-              <EuiCard
-                href="/x"
-                layout="horizontal"
-                title={'Interesting Project'}
-                description={'Some cool project build with Elastic UI, React and TypeScript.'}
-              />
-            </EuiFlexItem>
+            <FeaturedProjects projects={projects} />
           </EuiFlexGroup>
         </EuiPageBody>
       </EuiPage>
