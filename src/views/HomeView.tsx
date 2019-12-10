@@ -1,19 +1,14 @@
-import React, { Fragment, PropsWithChildren, PureComponent, useEffect, useState } from 'react'
+import React, { Fragment, PropsWithChildren, useEffect, useState } from 'react'
 import {
   EuiPage,
   EuiPageBody,
   EuiTitle,
-  EuiHeader,
-  EuiHeaderSectionItem,
-  EuiHeaderLogo,
-  EuiHeaderLink,
-  EuiHeaderSection,
   EuiEmptyPrompt,
   EuiSpacer,
   EuiFlexGroup, EuiCard, EuiFlexItem, EuiText
 } from '@elastic/eui'
+import { Navbar } from '../ui/navbar'
 
-import Logo from '../logo.svg'
 import { getFeaturedProjects, Project } from '../app/App'
 
 export function FeaturedProjects({ projects }: PropsWithChildren<{ projects: Array<Project> }>) {
@@ -42,27 +37,7 @@ export function HomeView() {
 
   return (
     <div>
-      <EuiHeader>
-        <EuiHeaderSection>
-          <EuiHeaderSectionItem border="none">
-            <EuiHeaderLogo iconType={Logo} href="/x">Site Name</EuiHeaderLogo>
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-
-        <EuiHeaderSection>
-          <EuiHeaderSectionItem>
-            <EuiHeaderLink href="#">About</EuiHeaderLink>
-            <EuiHeaderLink href="#">Projects</EuiHeaderLink>
-            <EuiHeaderLink href="#">Contact</EuiHeaderLink>
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-
-        <EuiHeaderSection side="right">
-          <EuiHeaderSectionItem>
-            <EuiHeaderLink href="#">GitHub</EuiHeaderLink>
-          </EuiHeaderSectionItem>
-        </EuiHeaderSection>
-      </EuiHeader>
+      <Navbar />
 
       <EuiPage restrictWidth={1024}>
         <EuiPageBody>
@@ -79,7 +54,6 @@ export function HomeView() {
           <EuiTitle>
             <h1>About Me</h1>
           </EuiTitle>
-
           <EuiSpacer />
 
           <EuiText>
@@ -90,13 +64,11 @@ export function HomeView() {
               blandit finibus, odio lectus imperdiet nisl, vitae efficitur felis erat non urna. Interdum et malesuada
               fames ac ante ipsum primis in faucibus.</p>
           </EuiText>
-
           <EuiSpacer />
 
           <EuiTitle>
             <h1>Featured Projects</h1>
           </EuiTitle>
-
           <EuiSpacer />
 
           <EuiFlexGroup gutterSize="m">
