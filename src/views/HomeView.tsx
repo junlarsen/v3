@@ -5,26 +5,30 @@ import {
   EuiTitle,
   EuiEmptyPrompt,
   EuiSpacer,
-  EuiFlexGroup, EuiCard, EuiFlexItem, EuiText
+  EuiFlexGroup,
+  EuiCard,
+  EuiFlexItem,
+  EuiText,
+  EuiImage,
+  EuiIcon
 } from '@elastic/eui'
+
 import { Navbar } from '../ui/navbar'
+import { getFeaturedProjects, languageVectors, Project } from '../app/App'
 
-import { getFeaturedProjects, Project } from '../app/App'
-
-export function FeaturedProjects({ projects }: PropsWithChildren<{ projects: Array<Project> }>) {
+function ProjectCard({ project }: PropsWithChildren<{ project: Project }>) {
   return (
-    <>
-      {projects.map(project => (
-        <EuiFlexItem>
-          <EuiCard
-            href={`https://github.com/${project.repo}`}
-            layout="horizontal"
-            title={project.title}
-            description={project.description}
-          />
-        </EuiFlexItem>)
-      )}
-    </>
+    <EuiFlexItem>
+      <EuiCard
+        icon={
+          <EuiIcon size="xl" type={languageVectors[project.language]} />
+        }
+        href={`https://github.com/${project.repo}`}
+        layout="horizontal"
+        title={project.title}
+        description={project.description}
+      />
+    </EuiFlexItem>
   )
 }
 
@@ -39,14 +43,18 @@ export function HomeView() {
     <div>
       <Navbar />
 
-      <EuiPage restrictWidth={1024}>
+      <EuiPage restrictWidth={960}>
         <EuiPageBody>
           <EuiEmptyPrompt
-            iconType="calendar"
-            title={<h2>There's nothing here</h2>}
+            title={<h2>supergrecko</h2>}
             body={
               <Fragment>
-                <p>This is currently empty, check back later</p>
+                <p>16, self-taught programming hobbyist</p>
+                <EuiImage
+                  alt="alt"
+                  url="/static/FjrwiP8Cyc.png"
+                  style={{ borderRadius: '50%' }}
+                />
               </Fragment>
             }
           />
@@ -72,7 +80,7 @@ export function HomeView() {
           <EuiSpacer />
 
           <EuiFlexGroup gutterSize="m">
-            <FeaturedProjects projects={projects} />
+            {projects.map(project => <ProjectCard project={project} />)}
           </EuiFlexGroup>
         </EuiPageBody>
       </EuiPage>

@@ -2,19 +2,16 @@ import React from 'react'
 import {
   EuiHeader,
   EuiHeaderSectionItem,
-  EuiHeaderLogo,
   EuiHeaderLink,
   EuiHeaderSection
 } from '@elastic/eui'
-
-import Logo from '../../logo.svg'
 
 export function Navbar() {
   return (
     <EuiHeader>
       <EuiHeaderSection>
         <EuiHeaderSectionItem border="none">
-          <EuiHeaderLogo iconType={Logo} href="/x">supergrecko.dev</EuiHeaderLogo>
+          <EuiHeaderLink href="/">supergrecko.dev</EuiHeaderLink>
         </EuiHeaderSectionItem>
       </EuiHeaderSection>
 
@@ -29,6 +26,7 @@ export function Navbar() {
       <EuiHeaderSection side="right">
         <EuiHeaderSectionItem>
           <EuiHeaderLink href="https://github.com/supergrecko">GitHub</EuiHeaderLink>
+          <EuiHeaderLink href="https://twitter.com/supergrecko">Twitter</EuiHeaderLink>
         </EuiHeaderSectionItem>
       </EuiHeaderSection>
     </EuiHeader>
