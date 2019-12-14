@@ -1,8 +1,8 @@
 import Projects from '../data/projects.json'
 
-import TypeScriptSVG from '../data/svg/typescript.svg'
-import ReactSVG from '../data/svg/react.svg'
-import PHPSVG from '../data/svg/php.svg'
+import TypeScriptSVG from '../icons/typescript.svg'
+import ReactSVG from '../icons/react.svg'
+import PHPSVG from '../icons/php.svg'
 
 export type Languages = 'TypeScript' | 'JavaScript' | 'Kotlin' | 'React'
 

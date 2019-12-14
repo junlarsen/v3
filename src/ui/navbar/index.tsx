@@ -3,7 +3,7 @@ import {
   EuiHeader,
   EuiHeaderSectionItem,
   EuiHeaderLink,
-  EuiHeaderSection
+  EuiHeaderSection,
 } from '@elastic/eui'
 
 export function Navbar() {
@@ -17,7 +17,6 @@ export function Navbar() {
 
       <EuiHeaderSection>
         <EuiHeaderSectionItem>
-          <EuiHeaderLink href="/about">About</EuiHeaderLink>
           <EuiHeaderLink href="/projects">Projects</EuiHeaderLink>
           <EuiHeaderLink href="/contact">Contact</EuiHeaderLink>
         </EuiHeaderSectionItem>
