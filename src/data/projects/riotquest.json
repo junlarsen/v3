@@ -1,6 +1,0 @@
-{
-  "language": "PHP",
-  "title": "RiotQuest",
-  "description": "Modern, open source API library for the Riot Games API, built for Laravel 6+ & PHP 7.1+",
-  "repo": "supergrecko/riot-quest"
-}

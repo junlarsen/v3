@@ -3,7 +3,6 @@ import {
   Route,
   Switch,
   BrowserRouter,
-  Link,
   withRouter,
   useLocation,
   RouteComponentProps
@@ -48,10 +47,10 @@ export function App() {
       <EuiPage restrictWidth={960} style={{ paddingTop: 60 }}>
         <EuiPageBody>
           <EuiEmptyPrompt
-            title={<h2>supergrecko</h2>}
+            title={<h1 style={{ fontSize: 64 }}>supergrecko</h1>}
             body={
               <Fragment>
-                <p>16, self-taught programming hobbyist</p>
+                <p style={{ fontSize: 20 }}>16, self-taught programming hobbyist</p>
                 <EuiImage
                   alt="alt"
                   url="/static/FjrwiP8Cyc.png"

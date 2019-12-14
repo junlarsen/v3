@@ -1,6 +1,0 @@
-{
-  "language": "TypeScript",
-  "title": "LeagueConnect",
-  "description": "Open source node module for interacting with the League of Legends Client APIs",
-  "repo": "supergrecko/league-connect"
-}
