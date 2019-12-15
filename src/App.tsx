@@ -7,6 +7,7 @@ import {
   useLocation,
   RouteComponentProps
 } from 'react-router-dom'
+
 import {
   EuiPage,
   EuiPageBody,
@@ -15,6 +16,8 @@ import {
   EuiTabs,
   EuiTab,
   EuiSpacer,
+  EuiFlexGroup,
+  EuiFlexItem
 } from '@elastic/eui'
 
 import { AboutView } from './views/AboutView'
@@ -44,8 +47,45 @@ const NavigationBar = withRouter(NavigationBarComponent)
 export function App() {
   return (
     <BrowserRouter>
-      <EuiPage restrictWidth={960} style={{ paddingTop: 60 }}>
+      <EuiPage restrictWidth={960}>
         <EuiPageBody>
+          <EuiSpacer size="xl" />
+
+          <EuiFlexGroup>
+            <EuiFlexItem>
+              <EuiFlexGroup>
+                <EuiFlexItem style={{ textAlign: 'center' }}>
+                  <EuiImage
+                    alt="alt"
+                    url="/static/FjrwiP8Cyc.png"
+                    style={{
+                      borderRadius: '50%',
+                      width: 260
+                    }}
+                  />
+                </EuiFlexItem>
+              </EuiFlexGroup>
+            </EuiFlexItem>
+
+            <EuiFlexItem>
+              <EuiFlexGroup alignItems="center">
+                <EuiFlexItem>
+                  <h1 style={{
+                    fontSize: 72,
+                  }}>supergrecko</h1>
+
+                  <EuiSpacer size="m" />
+
+                  <p style={{
+                    fontSize: 24
+                  }}>high school student, self-taught programming hobbyist</p>
+                </EuiFlexItem>
+              </EuiFlexGroup>
+            </EuiFlexItem>
+          </EuiFlexGroup>
+
+          <EuiSpacer size="xl" />
+          {/*
           <EuiEmptyPrompt
             title={<h1 style={{ fontSize: 64 }}>supergrecko</h1>}
             body={
@@ -59,6 +99,7 @@ export function App() {
               </Fragment>
             }
           />
+          */}
 
           <NavigationBar />
           <EuiSpacer />

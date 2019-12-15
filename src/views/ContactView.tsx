@@ -19,7 +19,7 @@ export function ContactView() {
       </EuiTitle>
 
       <EuiText>
-        <p>I'm available multiple places, here are ways to contact me.</p>
+        <p>You can reach me via multiple platforms, here are some ways to contact me.</p>
       </EuiText>
       <EuiSpacer />
 

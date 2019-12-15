@@ -1,4 +1,4 @@
-import React, { Fragment, PropsWithChildren, useEffect, useState } from 'react'
+import React, { Fragment, PropsWithChildren } from 'react'
 import {
   EuiTitle,
   EuiSpacer,
