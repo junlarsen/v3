@@ -7,7 +7,8 @@ import {
   EuiFlexItem,
   EuiCard,
   EuiIcon,
-  EuiLink
+  EuiLink,
+  EuiHorizontalRule
 } from '@elastic/eui'
 
 import { featured, logos, Project } from '../app/App'
@@ -39,7 +40,7 @@ export function AboutView() {
       <EuiText>
         <p style={{ fontSize: 20 }}>
           Hi there, I'm supergrecko, I'm a high school student from Norway. My favorite hobbies are programming and
-          video games. I began programming two and a half years ago I've done it on a daily basis ever since. I've done
+          video games. I began programming two and a half years ago and I've done it on a daily basis ever since. I've done
           full stack and a little bit of dev-ops. My favorite languages are Kotlin and TypeScript and my favorite
           framework is React.
         </p>
@@ -55,6 +56,12 @@ export function AboutView() {
       <EuiTitle>
         <h1>Featured Projects</h1>
       </EuiTitle>
+
+      <EuiText>
+        <p>These are the projects I had the most fun working on. They mean a lot to me.</p>
+      </EuiText>
+      <EuiHorizontalRule />
+
       <EuiSpacer />
 
       <EuiFlexGroup gutterSize="m">
