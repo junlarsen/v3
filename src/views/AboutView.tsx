@@ -6,8 +6,9 @@ import {
   EuiFlexGroup,
   EuiFlexItem,
   EuiCard,
-  EuiIcon
-} from "@elastic/eui"
+  EuiIcon,
+  EuiLink
+} from '@elastic/eui'
 
 import { featured, logos, Project } from '../app/App'
 
@@ -36,12 +37,18 @@ export function AboutView() {
       <EuiSpacer />
 
       <EuiText>
-        <p style={{ fontSize: 20 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed felis accumsan, venenatis lorem vitae,
-          volutpat odio. Ut pellentesque tincidunt urna, in ullamcorper diam suscipit vel. Integer pharetra vitae
-          ligula eget tincidunt. Duis volutpat volutpat ipsum eget ornare. Mauris nisl dui, dictum id eleifend sit
-          amet, vestibulum ornare ipsum. Donec bibendum dolor nec turpis tincidunt mollis. Nam semper, tortor eget
-          blandit finibus, odio lectus imperdiet nisl, vitae efficitur felis erat non urna. Interdum et malesuada
-          fames ac ante ipsum primis in faucibus.</p>
+        <p style={{ fontSize: 20 }}>
+          Hi there, I'm supergrecko, I'm a high school student from Norway. My favorite hobbies are programming and
+          video games. I began programming two and a half years ago I've done it on a daily basis ever since. I've done
+          full stack and a little bit of dev-ops. My favorite languages are Kotlin and TypeScript and my favorite
+          framework is React.
+        </p>
+
+        <p style={{ fontSize: 20 }}>
+          If you want to contact me you'll be able to reach me via the links <EuiLink
+          href="/contact">here.</EuiLink> Interested in my resume? <EuiLink href="mailto:me@supergrecko.com">shoot me an
+          email!</EuiLink>
+        </p>
       </EuiText>
       <EuiSpacer />
 

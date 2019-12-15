@@ -8,7 +8,7 @@ import {
   EuiTitle,
   EuiFlexGroup,
   EuiFlexItem,
-  EuiLink
+  EuiLink,
 } from '@elastic/eui'
 
 export function ContactView() {

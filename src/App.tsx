@@ -73,7 +73,6 @@ export function App() {
                   <h1 style={{
                     fontSize: 72,
                   }}>supergrecko</h1>
-
                   <EuiSpacer size="m" />
 
                   <p style={{
@@ -83,23 +82,7 @@ export function App() {
               </EuiFlexGroup>
             </EuiFlexItem>
           </EuiFlexGroup>
-
           <EuiSpacer size="xl" />
-          {/*
-          <EuiEmptyPrompt
-            title={<h1 style={{ fontSize: 64 }}>supergrecko</h1>}
-            body={
-              <Fragment>
-                <p style={{ fontSize: 20 }}>16, self-taught programming hobbyist</p>
-                <EuiImage
-                  alt="alt"
-                  url="/static/FjrwiP8Cyc.png"
-                  style={{ borderRadius: '50%' }}
-                />
-              </Fragment>
-            }
-          />
-          */}
 
           <NavigationBar />
           <EuiSpacer />
