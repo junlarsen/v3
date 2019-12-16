@@ -1,4 +1,4 @@
-import React, { Fragment, PropsWithChildren } from 'react'
+import React, { PropsWithChildren } from 'react'
 import {
   Route,
   Switch,
@@ -11,13 +11,13 @@ import {
 import {
   EuiPage,
   EuiPageBody,
-  EuiEmptyPrompt,
   EuiImage,
   EuiTabs,
   EuiTab,
   EuiSpacer,
   EuiFlexGroup,
-  EuiFlexItem
+  EuiFlexItem,
+  EuiShowFor, EuiHideFor
 } from '@elastic/eui'
 
 import { AboutView } from './views/AboutView'
@@ -70,9 +70,16 @@ export function App() {
             <EuiFlexItem>
               <EuiFlexGroup alignItems="center">
                 <EuiFlexItem>
-                  <h1 style={{
-                    fontSize: 72,
-                  }}>supergrecko</h1>
+                  <EuiShowFor sizes={['s']}>
+                    <h1 style={{
+                      fontSize: 60,
+                    }}>supergrecko</h1>
+                  </EuiShowFor>
+                  <EuiHideFor sizes={['s']}>
+                    <h1 style={{
+                      fontSize: 72,
+                    }}>supergrecko</h1>
+                  </EuiHideFor>
                   <EuiSpacer size="m" />
 
                   <p style={{
