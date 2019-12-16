@@ -2,8 +2,12 @@ import React, { Fragment } from 'react'
 import {
   EuiHorizontalRule,
   EuiText,
-  EuiTitle
+  EuiTitle,
+  EuiFlexGrid,
 } from '@elastic/eui'
+
+import { projects } from '../app/App'
+import { ProjectCard } from '../components/ProjectCard'
 
 export function ProjectView() {
   return (
@@ -17,6 +21,10 @@ export function ProjectView() {
       </EuiText>
 
       <EuiHorizontalRule />
+
+      <EuiFlexGrid columns={2}>
+        {Object.values(projects).map(project => (<ProjectCard project={project} />))}
+      </EuiFlexGrid>
     </Fragment>
   )
 }

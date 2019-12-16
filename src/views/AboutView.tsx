@@ -1,33 +1,15 @@
-import React, { Fragment, PropsWithChildren } from 'react'
+import React, { Fragment } from 'react'
 import {
   EuiTitle,
   EuiSpacer,
   EuiText,
   EuiFlexGroup,
-  EuiFlexItem,
-  EuiCard,
-  EuiIcon,
   EuiLink,
   EuiHorizontalRule
 } from '@elastic/eui'
 
-import { featured, logos, Project } from '../app/App'
-
-function ProjectCard({ project }: PropsWithChildren<{ project: Project }>) {
-  return (
-    <EuiFlexItem>
-      <EuiCard
-        icon={
-          <EuiIcon size="xl" type={logos[project.language]} />
-        }
-        href={`https://github.com/${project.repo}`}
-        layout="horizontal"
-        title={project.title}
-        description={project.description}
-      />
-    </EuiFlexItem>
-  )
-}
+import { featured } from '../app/App'
+import { ProjectCard } from '../components/ProjectCard'
 
 export function AboutView() {
   return (
