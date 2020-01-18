@@ -34,18 +34,6 @@ export const projects: Dictionary<Project> = {
     slug: "Tiny arithmetic virtual machine built in Kotlin Native.",
     repo: "supergrecko/StackVM"
   },
-  images: {
-    language: "Go",
-    title: "images",
-    slug: "My own dockerized image uploading microservice. Powered by golang and go-gin.",
-    repo: "supergrecko/images"
-  },
-  messier: {
-    language: "Kotlin",
-    title: "Messier",
-    slug: "My own tiny programming language. Currently in development.",
-    repo: "messier-lang/messier"
-  },
   v3: {
     language: "React",
     title: "v3",
@@ -61,7 +49,7 @@ export const projects: Dictionary<Project> = {
   riotquest: {
     language: "PHP",
     title: "RiotQuest",
-    slug: "Modern, open source API library for the Riot Games API, built for Laravel 6+ & PHP 7.1+",
+    slug: "Archived, was an open source API library for the Riot Games API, built for Laravel 6+ & PHP 7.1+",
     repo: "supergrecko/riot-quest"
   },
   leagueconnect: {
